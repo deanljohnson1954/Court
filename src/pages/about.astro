@@ -7,7 +7,7 @@ const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
 <BaseLayout
   title="About"
   description="UW Court – 10-bedroom UW student group rental a few blocks from the University of Washington. Four bathrooms, two kitchens, ~3,100 sq ft, furnished common areas, private backyard deck, and off-street parking."
-  image="/images/house-exterior.jpg"
+  image="/images/exterior-side.jpg"
 >
 
   <div class="page-header">
@@ -44,17 +44,17 @@ const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
             <li>Year-round landscaping — at no extra charge</li>
           </ul>
           <p style="font-size:0.9rem;">
-            <a href="tel:+17066030022">706-603-0022</a> &nbsp;·&nbsp;
+            <a href="tel:+17606030022">760-603-0022</a> &nbsp;·&nbsp;
             <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a>
           </p>
         </div>
         <div style="display:flex; flex-direction:column; gap:1rem;">
-          <img src={`${b}/images/house-exterior.jpg`} alt="UW Court exterior"
+          <img src={`${b}/images/front-yard.jpg`} alt="UW Court front yard exterior"
             style="border-radius:8px; border:3px solid var(--uw-gold-light); width:100%;" loading="lazy" />
           <div class="address-block">
             <h3>Get in Touch</h3>
             <p>{addressFull}</p>
-            <p><a href="tel:+17066030022">706-603-0022</a></p>
+            <p><a href="tel:+17606030022">760-603-0022</a></p>
             <p><a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a></p>
           </div>
           <iframe
@@ -75,13 +75,12 @@ const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
       <h2 class="section-heading">Exterior Photos</h2>
       <div class="gold-bar"></div>
       <div class="photo-grid">
-        <img src={`${b}/images/exterior-side.jpg`}      alt="Side exterior"           loading="lazy" />
-        <img src={`${b}/images/exterior-back.jpg`}      alt="Back exterior"           loading="lazy" />
-        <img src={`${b}/images/front-yard.jpg`}         alt="Front yard"              loading="lazy" />
-        <img src={`${b}/images/deck-furniture.jpg`}     alt="Deck with furniture"     loading="lazy" />
-        <img src={`${b}/images/backyard-entrance.jpg`}  alt="Backyard entrance"       loading="lazy" />
-        <img src={`${b}/images/parking-area.jpg`}       alt="Parking area"            loading="lazy" />
-        <img src={`${b}/images/side-entrance.jpg`}      alt="Side entrance"           loading="lazy" />
+        <img src={`${b}/images/ext-back-deck-1.jpg`}   alt="Back deck"               loading="lazy" />
+        <img src={`${b}/images/ext-back-deck-2.jpg`}   alt="Back deck with seating"  loading="lazy" />
+        <img src={`${b}/images/ext-front-1.jpg`}       alt="Front exterior"          loading="lazy" />
+        <img src={`${b}/images/ext-front-2.jpg`}       alt="Front yard"              loading="lazy" />
+        <img src={`${b}/images/ext-front-3.jpg`}       alt="Front street view"       loading="lazy" />
+        <img src={`${b}/images/ext-front-grass.jpg`}   alt="Front yard landscaping"  loading="lazy" />
       </div>
     </div>
   </section>
