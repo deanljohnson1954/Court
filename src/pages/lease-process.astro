@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
+---
+
+<BaseLayout
+  title="Lease Process"
+  description="Three simple steps to rent UW Court: contact us, submit your application, sign the lease, and move in. Group rental for UW students near the University of Washington."
+  image="/images/dining-room.jpg"
+>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Lease Process</h1>
+      <span class="page-header__sub">Three simple steps to make UW Court your new home</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2 style="color:var(--uw-purple);">How It Works</h2>
+          <div class="gold-bar" style="margin-left:0;"></div>
+          <p>
+            We rent UW Court as a <strong>group rental for UW students only</strong> — the entire house is leased to
+            one group of students. The process is simple and we guide you every step of the way.
+          </p>
+          <p>
+            Leases run for the full school year, from early September through late August. Tenants pay all utilities. No smoking, no pets.
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-mid);">
+            <a href="tel:+17066030022">706-603-0022</a> &nbsp;·&nbsp;
+            <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a>
+          </p>
+          <a href={`${b}/apply`} class="btn btn--gold" style="margin-top:0.5rem;">Start Your Application</a>
+        </div>
+        <div>
+          <img src={`${b}/images/exterior-hero.jpg`} alt="UW Court exterior"
+            style="border-radius:8px; border:3px solid var(--uw-gold-light); width:100%;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="section section--gray">
+    <div class="container" style="max-width:800px;">
+      <h2 class="section-heading">The Three Steps</h2>
+      <div class="gold-bar"></div>
+      <ol class="steps">
+        <li class="step">
+          <div class="step__number" aria-hidden="true">1</div>
+          <div class="step__body">
+            <h3>Contact Us &amp; Submit Your Application</h3>
+            <p>
+              Email <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a> or call
+              <a href="tel:+17066030022">706-603-0022</a> to get pricing and availability.
+              Then complete our <a href={`${b}/apply`}><strong>online rental application</strong></a> —
+              fill it out in your browser and submit directly. No printing required.
+            </p>
+            <a href={`${b}/apply`} class="btn btn--purple" style="margin-top:0.5rem;">Fill Out Application</a>
+          </div>
+        </li>
+        <li class="step" style="margin-top:2rem;">
+          <div class="step__number" aria-hidden="true">2</div>
+          <div class="step__body">
+            <h3>Complete Lease &amp; Make Required Deposits</h3>
+            <p>
+              Once approved, your group will complete a lease agreement and make the required deposits.
+              We'll walk you through every detail once your group has been selected.
+            </p>
+          </div>
+        </li>
+        <li class="step" style="margin-top:2rem;">
+          <div class="step__number" aria-hidden="true">3</div>
+          <div class="step__body">
+            <h3>Easy Move-In</h3>
+            <p>
+              On move-in day, your keys will be waiting. We'll complete a condition form documenting
+              the state of your bedroom and common areas to protect everyone.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <div class="gold-bar"></div>
+      <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
+        {[
+          {q: "Is UW Court affiliated with the University of Washington?", a: "No. UW Court is privately owned and has no affiliation with the University of Washington."},
+          {q: "Who can rent UW Court?", a: "UW students only. Every tenant must provide a UW Student ID with their application, along with a Driver's License and/or Passport."},
+          {q: "Can I rent just one bedroom?", a: "No — we rent the entire house to one group only. Contact us for current pricing and availability."},
+          {q: "How many bedrooms and bathrooms does UW Court have?", a: "10 bedrooms (4 upstairs, 2 large bedrooms on the main floor, 4 in the basement) and 4 full bathrooms (2 upstairs, 1 on the main floor, 1 in the basement, all with a shower or shower/tub). Many of the bedrooms are large enough to be shared."},
+          {q: "What is included in the rent?", a: "Furnished family room and dining areas, two full kitchens (main + basement), washer and dryer in the basement, a gated private backyard deck with outdoor furniture, two off-street parking spots behind the house, monthly professional cleaning of common areas, and year-round landscaping — all at no additional charge."},
+          {q: "What about utilities and the garage?", a: "Tenants pay all utilities. The garage is not included in the lease. Tenants may apply for street parking permits through the City of Seattle."},
+          {q: "What do I need to bring?", a: "Only items for your own bedroom. Common areas are fully furnished."},
+          {q: "Are smoking or pets allowed?", a: "No smoking and no pets."},
+          {q: "When does the lease run?", a: "Leases run for the full school year — from early September through late August. Contact us for the current year's exact dates."},
+        ].map(item => (
+          <div style="background:#fff; padding:1.25rem 1.5rem; border-radius:6px; border-left:4px solid var(--uw-gold); box-shadow:0 1px 6px rgba(75,46,131,0.07);">
+            <h3 style="color:var(--uw-purple); font-size:1rem; margin-bottom:0.35rem;">{item.q}</h3>
+            <p style="margin:0; color:var(--text-mid); font-size:0.92rem;">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Ready to Move Forward?</h2>
+      <p>Apply online today — it only takes a few minutes.</p>
+      <a href={`${b}/apply`} class="btn btn--gold">Apply Now</a>
+    </div>
+  </div>
+
+</BaseLayout>

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(SRC=\"/c/Users/deanl/Documents/C - UW Manor/UW-Manor-Website\")",
+      "Bash(DST=\"/c/Users/deanl/Documents/C - UW Court/Website\")",
+      "Bash(for item:*)",
+      "Bash(do cp:*)",
+      "Bash(done)",
+      "WebFetch(domain:www.zillow.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "WebSearch",
+      "Bash(npm install:*)",
+      "Bash(node scripts/make-fillable-pdf.cjs)"
+    ]
+  }
+}

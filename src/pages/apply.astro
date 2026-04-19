@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { addressFull } from '../config/site';
+const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
+---
+
+<BaseLayout
+  title="Apply"
+  description="Download the UW Court fillable rental application. Fill it out, then print or email to uwcourt@gmail.com."
+  image="/images/exterior-hero.jpg"
+>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Rental Application</h1>
+      <span class="page-header__sub">{addressFull}</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:720px;">
+
+      <!-- INSTRUCTIONS -->
+      <div style="background:#fff; border:2px solid var(--uw-gold); border-radius:8px; padding:2rem 2.5rem; margin-bottom:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+        <h2 style="color:var(--uw-purple); margin-bottom:0.4rem;">How to Apply</h2>
+        <div class="gold-bar" style="margin-left:0;"></div>
+        <ol style="margin:1rem 0 0 1.25rem; line-height:2.4; font-size:1rem;">
+          <li><strong>Call us first</strong> — <a href="tel:+17066030022">706-603-0022</a> or <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a> to confirm the house is available before applying.</li>
+          <li><strong>Download</strong> the application below and fill it out on your computer.</li>
+          <li><strong>Every group member</strong> must complete a separate application and submit proper identification — a copy of their <strong>University of Washington Student ID</strong> and their <strong>Driver's License or Passport</strong>.</li>
+          <li>Once all group members have completed their applications, <strong>submit all applications together as one package</strong> to <a href="mailto:uwcourt@gmail.com"><strong>uwcourt@gmail.com</strong></a>.</li>
+        </ol>
+      </div>
+
+      <!-- DOWNLOAD -->
+      <div style="text-align:center; padding:2.5rem; background:#fff; border-radius:8px; box-shadow:0 2px 20px rgba(0,0,0,0.08); margin-bottom:2rem;">
+        <p style="font-size:1.1rem; margin-bottom:1.5rem; color:var(--text-mid);">
+          The application is a fillable PDF — type directly into the fields on your computer, then email or print.
+        </p>
+        <a href={`${b}/Student-Rental-Application.pdf`} download class="btn btn--gold"
+          style="font-size:1.1rem; padding:1rem 3rem;">
+          Download Application (PDF)
+        </a>
+        <p style="margin-top:1.25rem; font-size:0.88rem; color:var(--text-light);">
+          After completing, email to <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="address-block" style="max-width:480px; margin:0 auto;">
+        <h3>Contact Us</h3>
+        <p>Call or email to confirm availability before applying.</p>
+        <p style="font-size:1.1rem; font-weight:700;">
+          <a href="tel:+17066030022" style="color:#fff;">706-603-0022</a>
+        </p>
+        <p>
+          <a href="mailto:uwcourt@gmail.com" style="color:var(--uw-gold-light);">uwcourt@gmail.com</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

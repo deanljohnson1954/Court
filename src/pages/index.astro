@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { addressFull, googleMapsUrl } from '../config/site';
+const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
+---
+
+<BaseLayout
+  title="Home"
+  description="UW Court – UW student group rental near the University of Washington. 10 bedrooms, 4 bathrooms, ~3,100 sq ft, two kitchens, furnished common areas, private backyard deck, and off-street parking. Seattle, WA."
+  image="/images/exterior-hero.jpg"
+>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="UW Court hero">
+    <img src={`${b}/images/exterior-hero.jpg`} alt="UW Court exterior" class="hero__bg" fetchpriority="high" />
+    <div class="hero__content">
+      <h1 class="hero__title">UW COURT</h1>
+      <p class="hero__subtitle">UW Student Group Rental — A Few Blocks from Campus</p>
+      <p class="hero__disclaimer">Not owned by or affiliated with the University of Washington</p>
+      <div class="hero__actions">
+        <a href={`${b}/about`} class="btn btn--gold">See the Property</a>
+        <a href={`${b}/apply`} class="btn btn--outline-white">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDRESS STRIP -->
+  <div style="background: var(--uw-purple); padding: 0.65rem 1.5rem; text-align: center;">
+    <p style="margin:0; font-weight:600; color: rgba(255,255,255,0.88); font-size:0.86rem; letter-spacing:0.02em;">
+      <a href={googleMapsUrl} target="_blank" rel="noopener" style="color:#fff;">{addressFull}</a> &nbsp;|&nbsp;
+      <a href="tel:+17066030022" style="color:#fff;">706-603-0022</a> &nbsp;|&nbsp;
+      <a href="mailto:uwcourt@gmail.com" style="color:#fff;">uwcourt@gmail.com</a>
+    </p>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2 style="color:var(--uw-purple);">A Home Away From Home</h2>
+          <div class="gold-bar" style="margin-left:0;"></div>
+          <p>
+            UW Court sits just a few blocks from the University of Washington campus.
+            We rent the entire house as a <strong>group rental for UW students</strong>,
+            perfect for students who want to live together in comfort.
+            With <strong>10 bedrooms</strong> across three floors — many large enough to be shared — and roughly <strong>3,100 sq ft</strong> of living space, there is plenty of room for the whole group.
+          </p>
+          <p>
+            Common areas are fully furnished, so all you need to bring is what you need for your own bedroom.
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-mid);">
+            <a href="tel:+17066030022">706-603-0022</a> &nbsp;·&nbsp;
+            <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a>
+          </p>
+          <a href={`${b}/about`} class="btn btn--purple" style="margin-top:0.5rem;">Explore the Property</a>
+        </div>
+        <div>
+          <img src={`${b}/images/exterior-hero.jpg`} alt="UW Court exterior"
+            style="border-radius:8px; border:3px solid var(--uw-gold-light); width:100%;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section-heading">We Handle All the Details</h2>
+      <div class="gold-bar"></div>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-card__icon">🛋️</div>
+          <h3>Furnished Common Areas</h3>
+          <p>Family room and dining areas come furnished with couches, tables, and chairs — ready from day one.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🧹</div>
+          <h3>Monthly Professional Cleaning</h3>
+          <p>A professional cleaner visits monthly to clean all common areas (bedrooms not included) — at no extra charge.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3>Landscaping Included</h3>
+          <p>We handle all the landscaping year-round at no additional charge.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🔑</div>
+          <h3>10 Bedrooms Across 3 Floors</h3>
+          <p>4 bedrooms upstairs, 2 large bedrooms on the main floor, and 4 in the basement — many large enough to be shared.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🍳</div>
+          <h3>Two Full Kitchens</h3>
+          <p>Kitchen on the main floor plus a second kitchen in the basement, each with its own dining area.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🛁</div>
+          <h3>Four Bathrooms</h3>
+          <p>Four full bathrooms — two upstairs, one on the main floor, and one in the basement — all with a shower or shower/tub.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌳</div>
+          <h3>Private Backyard Deck</h3>
+          <p>Gated, private deck in the backyard, furnished with outdoor furniture — a great place to hang out between classes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🧺</div>
+          <h3>In-Home Laundry</h3>
+          <p>Washer and dryer in the basement — no trips to a laundromat.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🚗</div>
+          <h3>Off-Street Parking</h3>
+          <p>Two parking spots behind the house (fits up to three small cars). Street parking permits are also available through the City of Seattle. Garage is not included in the lease.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAMPUS CALLOUT -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <img src={`${b}/images/uw-blossoms.jpg`} alt="University of Washington campus in spring"
+            style="border-radius:8px;" loading="lazy" />
+        </div>
+        <div>
+          <h2 style="color:var(--uw-purple);">Steps from Campus</h2>
+          <div class="gold-bar" style="margin-left:0;"></div>
+          <p>
+            UW Court is just a few blocks from the University of Washington — one of the nation's top
+            research universities. Walk to class, the library, and campus events in minutes.
+          </p>
+          <ul style="margin:0.75rem 0 1.5rem 1.5rem; line-height:2.1;">
+            <li>Contact us to discuss pricing &amp; availability</li>
+            <li>Complete the online application</li>
+            <li>Sign the lease &amp; make required deposits</li>
+            <li>Move in — keys waiting for you</li>
+          </ul>
+          <a href={`${b}/apply`} class="btn btn--gold">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Questions? We'd Love to Hear From You</h2>
+      <p>
+        <a href="tel:+17066030022" style="color:var(--uw-gold-light); font-weight:700;">706-603-0022</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:uwcourt@gmail.com" style="color:var(--uw-gold-light); font-weight:700;">uwcourt@gmail.com</a>
+      </p>
+      <a href={`${b}/apply`} class="btn btn--gold">Apply Now</a>
+    </div>
+  </div>
+
+</BaseLayout>
