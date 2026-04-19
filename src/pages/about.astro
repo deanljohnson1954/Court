@@ -73,64 +73,47 @@ const b = import.meta.env.BASE_URL.replace(/\/+$/, '');
   <!-- OUTSIDE PICTURES -->
   <section class="section section--gray">
     <div class="container">
-      <h2 class="section-heading">Exterior Photos</h2>
+      <h2 class="section-heading">Photos</h2>
       <div class="gold-bar"></div>
-      <div class="photo-grid">
+      <div class="photo-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
         <img src={`${b}/images/exterior-side.jpg`}      alt="Side exterior"           loading="lazy" />
         <img src={`${b}/images/exterior-back.jpg`}      alt="Back exterior"           loading="lazy" />
         <img src={`${b}/images/front-yard.jpg`}         alt="Front yard"              loading="lazy" />
         <img src={`${b}/images/bedroom-1.jpg`}          alt="Bedroom 1"               loading="lazy" />
         <img src={`${b}/images/bedroom-2.jpg`}          alt="Bedroom 2"               loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERIOR PHOTOS -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-heading">Interior Photos</h2>
-      <div class="gold-bar"></div>
-      <div class="photo-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <!-- Main Floor Common Areas -->
-        <img src={`${b}/images/dining-area.jpg`} alt="Dining area" loading="lazy" />
-        <img src={`${b}/images/family-room.jpg`} alt="Family room" loading="lazy" />
-        <img src={`${b}/images/kitchen-1.jpg`} alt="Main kitchen" loading="lazy" />
-        <img src={`${b}/images/kitchen-2.jpg`} alt="Second kitchen" loading="lazy" />
-        <img src={`${b}/images/laundry-room.jpg`} alt="Laundry room" loading="lazy" />
-        <img src={`${b}/images/staircase.jpg`} alt="Staircase" loading="lazy" />
-        <img src={`${b}/images/hallway.jpg`} alt="Hallway" loading="lazy" />
-        <img src={`${b}/images/pantry.jpg`} alt="Pantry" loading="lazy" />
-        <img src={`${b}/images/closet.jpg`} alt="Closet" loading="lazy" />
-        <img src={`${b}/images/study-area.jpg`} alt="Study area" loading="lazy" />
-        <img src={`${b}/images/deck-furniture.jpg`} alt="Deck with furniture" loading="lazy" />
-        <img src={`${b}/images/backyard-entrance.jpg`} alt="Backyard entrance" loading="lazy" />
-        <img src={`${b}/images/parking-area.jpg`} alt="Parking area" loading="lazy" />
-        <img src={`${b}/images/side-entrance.jpg`} alt="Side entrance" loading="lazy" />
-
-        <!-- Bedrooms -->
-        <img src={`${b}/images/bedroom-3.jpg`} alt="Bedroom 3" loading="lazy" />
-        <img src={`${b}/images/bedroom-4.jpg`} alt="Bedroom 4" loading="lazy" />
-        <img src={`${b}/images/bedroom-5.jpg`} alt="Bedroom 5" loading="lazy" />
-        <img src={`${b}/images/bedroom-6.jpg`} alt="Bedroom 6" loading="lazy" />
-        <img src={`${b}/images/bedroom-7.jpg`} alt="Bedroom 7" loading="lazy" />
-        <img src={`${b}/images/bedroom-8.jpg`} alt="Bedroom 8" loading="lazy" />
-        <img src={`${b}/images/bedroom-9.jpg`} alt="Bedroom 9" loading="lazy" />
-        <img src={`${b}/images/bedroom-10.jpg`} alt="Bedroom 10" loading="lazy" />
-        <img src={`${b}/images/additional-bedroom.jpg`} alt="Additional bedroom" loading="lazy" />
-        <img src={`${b}/images/basement-bedroom.jpg`} alt="Basement bedroom" loading="lazy" />
-
-        <!-- Bathrooms -->
-        <img src={`${b}/images/bathroom-1.jpg`} alt="Bathroom 1" loading="lazy" />
-        <img src={`${b}/images/bathroom-2.jpg`} alt="Bathroom 2" loading="lazy" />
-        <img src={`${b}/images/bathroom-3.jpg`} alt="Bathroom 3" loading="lazy" />
-        <img src={`${b}/images/bathroom-4.jpg`} alt="Bathroom 4" loading="lazy" />
-        <img src={`${b}/images/basement-bath.jpg`} alt="Basement bathroom" loading="lazy" />
-
-        <!-- Basement Common Areas -->
-        <img src={`${b}/images/basement-common.jpg`} alt="Basement common area" loading="lazy" />
-        <img src={`${b}/images/basement-kitchen.jpg`} alt="Basement kitchen" loading="lazy" />
-        <img src={`${b}/images/storage-area.jpg`} alt="Storage area" loading="lazy" />
-        <img src={`${b}/images/utility-room.jpg`} alt="Utility room" loading="lazy" />
+        <img src={`${b}/images/dining-area.jpg`}        alt="Dining area"             loading="lazy" />
+        <img src={`${b}/images/family-room.jpg`}        alt="Family room"             loading="lazy" />
+        <img src={`${b}/images/kitchen-1.jpg`}          alt="Main kitchen"            loading="lazy" />
+        <img src={`${b}/images/kitchen-2.jpg`}          alt="Second kitchen"          loading="lazy" />
+        <img src={`${b}/images/laundry-room.jpg`}       alt="Laundry room"            loading="lazy" />
+        <img src={`${b}/images/staircase.jpg`}          alt="Staircase"               loading="lazy" />
+        <img src={`${b}/images/hallway.jpg`}            alt="Hallway"                 loading="lazy" />
+        <img src={`${b}/images/pantry.jpg`}             alt="Pantry"                  loading="lazy" />
+        <img src={`${b}/images/closet.jpg`}             alt="Closet"                  loading="lazy" />
+        <img src={`${b}/images/study-area.jpg`}         alt="Study area"              loading="lazy" />
+        <img src={`${b}/images/deck-furniture.jpg`}     alt="Deck with furniture"     loading="lazy" />
+        <img src={`${b}/images/backyard-entrance.jpg`}  alt="Backyard entrance"       loading="lazy" />
+        <img src={`${b}/images/parking-area.jpg`}       alt="Parking area"            loading="lazy" />
+        <img src={`${b}/images/side-entrance.jpg`}      alt="Side entrance"           loading="lazy" />
+        <img src={`${b}/images/bedroom-3.jpg`}          alt="Bedroom 3"               loading="lazy" />
+        <img src={`${b}/images/bedroom-4.jpg`}          alt="Bedroom 4"               loading="lazy" />
+        <img src={`${b}/images/bedroom-5.jpg`}          alt="Bedroom 5"               loading="lazy" />
+        <img src={`${b}/images/bedroom-6.jpg`}          alt="Bedroom 6"               loading="lazy" />
+        <img src={`${b}/images/bedroom-7.jpg`}          alt="Bedroom 7"               loading="lazy" />
+        <img src={`${b}/images/bedroom-8.jpg`}          alt="Bedroom 8"               loading="lazy" />
+        <img src={`${b}/images/bedroom-9.jpg`}          alt="Bedroom 9"               loading="lazy" />
+        <img src={`${b}/images/bedroom-10.jpg`}         alt="Bedroom 10"              loading="lazy" />
+        <img src={`${b}/images/additional-bedroom.jpg`} alt="Additional bedroom"       loading="lazy" />
+        <img src={`${b}/images/basement-bedroom.jpg`}   alt="Basement bedroom"        loading="lazy" />
+        <img src={`${b}/images/bathroom-1.jpg`}         alt="Bathroom 1"              loading="lazy" />
+        <img src={`${b}/images/bathroom-2.jpg`}         alt="Bathroom 2"              loading="lazy" />
+        <img src={`${b}/images/bathroom-3.jpg`}         alt="Bathroom 3"              loading="lazy" />
+        <img src={`${b}/images/bathroom-4.jpg`}         alt="Bathroom 4"              loading="lazy" />
+        <img src={`${b}/images/basement-bath.jpg`}      alt="Basement bathroom"       loading="lazy" />
+        <img src={`${b}/images/basement-common.jpg`}    alt="Basement common area"    loading="lazy" />
+        <img src={`${b}/images/basement-kitchen.jpg`}   alt="Basement kitchen"        loading="lazy" />
+        <img src={`${b}/images/storage-area.jpg`}       alt="Storage area"            loading="lazy" />
+        <img src={`${b}/images/utility-room.jpg`}       alt="Utility room"            loading="lazy" />
       </div>
     </div>
   </section>
