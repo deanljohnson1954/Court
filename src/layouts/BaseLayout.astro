@@ -33,7 +33,11 @@ const path = Astro.url.pathname;
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="UW Court" />
-    <meta name="keywords" content="UW Court, student housing Seattle, University of Washington housing, group rental Seattle, Seattle student apartments" />
+    <meta name="keywords" content="UW Court, UW student housing, University of Washington housing, group rental Seattle, student house rental Seattle, off-campus UW housing, 5031 19th Ave NE Seattle, UW off-campus housing, Seattle student rental, student group rental near UW, university district student housing" />
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Seattle, Washington" />
+    <meta name="geo.position" content="47.6657;-122.3055" />
+    <meta name="ICBM" content="47.6657, -122.3055" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
@@ -46,10 +50,12 @@ const path = Astro.url.pathname;
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "ApartmentComplex",
+      "@type": ["ApartmentComplex", "LodgingBusiness"],
       "name": "UW Court",
-      "description": "Student group rental house near the University of Washington, Seattle.",
+      "description": "10-bedroom student group rental house near the University of Washington in Seattle, WA. ~3,100 sq ft across three floors with 4 bathrooms, two kitchens, furnished common areas, private backyard deck, and off-street parking.",
       "url": siteUrl,
+      "logo": `${siteUrl}/favicon.svg`,
+      "image": `${siteUrl}/images/ext-front-3.jpg`,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": address.street,
@@ -58,8 +64,31 @@ const path = Astro.url.pathname;
         "postalCode": address.zip,
         "addressCountry": "US"
       },
-      "telephone": "+1-706-603-0022",
-      "email": "uwcourt@gmail.com"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.6657,
+        "longitude": -122.3055
+      },
+      "telephone": "+1-760-603-0022",
+      "email": "uwcourt@gmail.com",
+      "numberOfRooms": 10,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "10 Bedrooms", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "4 Full Bathrooms", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Two Kitchens", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "In-Unit Washer/Dryer", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Private Backyard Deck", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Off-Street Parking", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Furnished Common Areas", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Monthly Professional Cleaning", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Year-Round Landscaping", "value": true }
+      ],
+      "knowsAbout": "University of Washington student housing",
+      "areaServed": {
+        "@type": "City",
+        "name": "Seattle",
+        "sameAs": "https://www.wikidata.org/wiki/Q5083"
+      }
     })} />
     <link rel="icon" type="image/svg+xml" href={`${b}/favicon.svg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -104,7 +133,7 @@ const path = Astro.url.pathname;
         <hr class="footer-divider" />
         <div class="footer-copy">
           <p>{addressFull} &nbsp;|&nbsp;
-            <a href="tel:+17066030022">706-603-0022</a> &nbsp;|&nbsp;
+            <a href="tel:+17606030022">760-603-0022</a> &nbsp;|&nbsp;
             <a href="mailto:uwcourt@gmail.com">uwcourt@gmail.com</a>
           </p>
           <p>Not owned by or affiliated with the University of Washington.</p>
