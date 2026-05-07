@@ -4,5 +4,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://uwcourt.com',
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/apply-thanks'),
+    }),
+  ],
 });
