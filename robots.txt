@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /apply-thanks
+
+Sitemap: https://uwcourt.com/sitemap-index.xml
